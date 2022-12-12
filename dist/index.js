@@ -9713,7 +9713,7 @@ async function run() {
 
     // const ghToken = core.getInput('ghToken');
     // const octokit = new GitHub(ghToken, {});
-    const ghToken = core.getInput('ghToken');
+    const ghToken = process.env['SECRET_TOKEN'] // core.getInput('ghToken');
     core.info(`>>>>>>> ${ghToken}`);
     const octokit = github.getOctokit(ghToken)
 
