@@ -37,7 +37,7 @@ async function run() {
     core.info('>>>>>>>>>')
     core.info(JSON.stringify(files, null, 2))
     for (const file of files) {
-      core.info('::', file.filename)
+      core.info('::', file)
     }
 
     core.setOutput('time', new Date().toTimeString());
