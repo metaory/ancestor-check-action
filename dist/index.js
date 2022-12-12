@@ -9738,7 +9738,7 @@ async function run() {
     }
     const files = await getFiles()
     core.info('>>>>>>>>>')
-    core.info(files)
+    core.info(JSON.stringify(files, null, 2))
 
     core.setOutput('time', new Date().toTimeString());
   } catch (error) {
