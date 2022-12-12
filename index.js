@@ -1,6 +1,7 @@
+const github = require('@actions/github');
 const core = require('@actions/core');
+
 const wait = require('./wait');
-const { GitHub } = require('@actions/github');
 
 async function run() {
   try {
