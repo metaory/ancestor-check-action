@@ -9710,8 +9710,11 @@ async function run() {
     core.debug('#############')
     core.info('<- Starting ->')
 
+    // const ghToken = core.getInput('ghToken');
+    // const octokit = new GitHub(ghToken, {});
     const ghToken = core.getInput('ghToken');
-    const octokit = new GitHub(ghToken, {});
+    core.info(`>>>>>>> ${ghToken}`);
+    const octokit = github.getOctokit(ghToken)
 
     const ms = core.getInput('milliseconds');
     core.info(`xorging ${ms} milliseconds ...`);
