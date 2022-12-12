@@ -5,6 +5,7 @@ const wait = require('./wait');
 // most @actions toolkit packages have async methods
 async function run() {
   try {
+    core.debug('=============')
     core.info('<< Starting >>')
     const ms = core.getInput('milliseconds');
     core.info(`Waiting ${ms} milliseconds ...`);
