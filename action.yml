@@ -1,0 +1,17 @@
+name: 'ancestor-check'
+description: 'checks if PR have any commits from the target branch'
+inputs:
+  branch:
+    description: 'name of the target branch'
+    required: true
+    default: 'dev'
+  milliseconds:  # id of input
+    description: 'number of milliseconds to wait'
+    required: true
+    default: '1000'
+outputs:
+  time: # output will be available to future steps
+    description: 'The current time after waiting'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
