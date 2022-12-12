@@ -9739,6 +9739,9 @@ async function run() {
     const files = await getFiles()
     core.info('>>>>>>>>>')
     core.info(JSON.stringify(files, null, 2))
+    for (const file of files) {
+      core.info('::', file.filename)
+    }
 
     core.setOutput('time', new Date().toTimeString());
   } catch (error) {
